@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  body {
+    background-color: #08090a;
+    color: #f4f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Geist", "Segoe UI", sans-serif;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ── "Not-AI" Precision Surface Ladder ── */
+.surface-base {
+  background-color: #0d0e11;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.surface-card {
+  background-color: #121317;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.surface-elevated {
+  background-color: #18191f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.surface-interactive:hover {
+  background-color: #1b1c22;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* ── Minimal Crisp Switch (iOS / Vercel style) ── */
+.switch-track {
+  width: 32px;
+  height: 18px;
+  border-radius: 9999px;
+  background-color: #27272a;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.switch-track.active {
+  background-color: #f4f4f6;
+}
+.switch-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background-color: #08090a;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.switch-track.active .switch-thumb {
+  transform: translateX(14px);
+  background-color: #08090a;
+}
+
+/* ── Crisp Pill Navigation ── */
+.nav-pill {
+  color: #8a8f98;
+  transition: all 0.15s ease;
+}
+.nav-pill:hover {
+  color: #f4f4f6;
+}
+.nav-pill-active {
+  background-color: #22232a;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
