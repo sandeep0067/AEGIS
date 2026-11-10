@@ -1,4 +1,4 @@
-# AEGIS
+# AEGIS 
 
 AEGIS is a privacy-first Chrome extension that checks a URL for common phishing signals and explains what it finds. Analysis runs locally in the browser; results are indicators, not a guarantee that a site is safe or malicious.
 
